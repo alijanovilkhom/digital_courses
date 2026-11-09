@@ -1,0 +1,113 @@
+{
+  "Meta": {
+    "title": "Digital kurslar — raqamli kasblar boʻyicha onlayn kurslar",
+    "description": "Onlayn kurslar katalogi: har bir kursning dasturi, narxi va ustozi. Yordamchi savollaringizga javob beradi."
+  },
+  "LocaleSwitcher": {
+    "label": "Til"
+  },
+  "Nav": {
+    "brand": "Digital kurslar",
+    "label": "Sayt boʻlimlari",
+    "courses": "Kurslar",
+    "teachers": "Ustozlar",
+    "pricing": "Narxlar",
+    "faq": "Savollar",
+    "cta": "Kursni tanlash",
+    "menu": "Menyu",
+    "skip": "Asosiy mazmunga oʻtish",
+    "assistant": "Yordamchi"
+  },
+  "Hero": {
+    "title": "Raqamli kasblar boʻyicha kurslar",
+    "lead": "Katalogdan kursni tanlang, uning dasturi, narxi va ustozini koʻring. Yordamchi har bir kurs boʻyicha savollaringizga javob beradi.",
+    "primary": "Kursni tanlash",
+    "secondary": "Yordamchidan soʻrash",
+    "windowTitle": "Yordamchi",
+    "question": "Kod bilan hech ishlamagan boʻlsam, nimadan boshlayman?",
+    "answer": "Katalogdagi kurslarga qarang: har birida davomiylik, daraja, narx va ustoz koʻrsatilgan. Masalan:",
+    "placeholder": "Kurslar haqida savol yozing",
+    "send": "Yuborish"
+  },
+  "Courses": {
+    "title": "Kurslar katalogi",
+    "intro": "Har bir kursning davomiyligi, darajasi, narxi va ustozi",
+    "empty": "Kurslar tez orada katalogda paydo boʻladi"
+  },
+  "Steps": {
+    "title": "Kursni qanday tanlash kerak",
+    "choose": {
+      "title": "Yoʻnalishni tanlang",
+      "text": "Katalogni oching va kurslarni davomiyligi hamda darajasi boʻyicha solishtiring"
+    },
+    "study": {
+      "title": "Dasturni oʻrganing",
+      "text": "Har bir kursda tavsif, narx va ustoz koʻrsatilgan"
+    },
+    "ask": {
+      "title": "Yordamchiga savol bering",
+      "text": "U maktab materiallari asosida oʻzbek, rus va ingliz tillarida javob beradi"
+    }
+  },
+  "Teachers": {
+    "title": "Ustozlar",
+    "intro": "Kurslarni kim olib boradi va qanday soha bilan shugʻullanadi",
+    "empty": "Ustozlar roʻyxati tez orada paydo boʻladi"
+  },
+  "Pricing": {
+    "title": "Kurs narxlari",
+    "intro": "Katalogdagi barcha kurslarning narxi va davomiyligi",
+    "empty": "Narxlar tez orada paydo boʻladi"
+  },
+  "Faq": {
+    "title": "Koʻp soʻraladigan savollar",
+    "choose": {
+      "q": "Kursni qanday tanlayman?",
+      "a": "Katalogni oching va davomiylik, daraja hamda narxni solishtiring. Ikkilansangiz, maqsadingizni yordamchiga ayting, u mos kursni tavsiya qiladi."
+    },
+    "source": {
+      "q": "Yordamchi javoblarni qayerdan oladi?",
+      "a": "Maktab materiallaridan: kurs dasturlari, narxlar va ustozlar tavsifidan. Materiallarda javob boʻlmasa, yordamchi shuni aytadi."
+    },
+    "languages": {
+      "q": "Sayt qaysi tillarda ishlaydi?",
+      "a": "Oʻzbek, rus va ingliz tillarida. Til saytning yuqori qismida almashtiriladi."
+    },
+    "prices": {
+      "q": "Narxlarni qayerdan koʻraman?",
+      "a": "«Kurs narxlari» boʻlimida: unda katalogdagi har bir kursning narxi koʻrsatilgan"
+    }
+  },
+  "Footer": {
+    "title": "Barcha kurslar bitta katalogda",
+    "lead": "Har bir kursning dasturi, narxi va ustozi. Savollarni yordamchiga berishingiz mumkin."
+  },
+  "Assistant": {
+    "noMaterials": "Maktab materiallarida hozircha maʼlumot yoʻq. Savolni keyinroq bering",
+    "title": "Kurslar boʻyicha yordamchi",
+    "intro": "Kurslar, narxlar, jadval yoki ustozlar haqida soʻrang. Yordamchi maktab materiallari asosida javob beradi.",
+    "examples": {
+      "e1": "Yangi boshlovchilarga qaysi kurslar mos?",
+      "e2": "Eng yaqin guruhlar qachon boshlanadi?",
+      "e3": "Qanday toʻlayman va muddatli toʻlov bormi?",
+      "e4": "Kurs uchun pulni qaytarib olsa boʻladimi?"
+    },
+    "chatLabel": "Yordamchi bilan suhbat",
+    "emptyHint": "Kurslar, narxlar yoki jadval haqida savol bering",
+    "inputLabel": "Savolingiz",
+    "placeholder": "Savol yozing",
+    "send": "Yuborish",
+    "clear": "Suhbatni tozalash",
+    "thinking": "Javob qidiryapman…",
+    "sources": "Manbalar",
+    "errors": {
+      "not_configured": "Yordamchi hali sozlanmagan",
+      "rate_limited": "Ketma-ket juda koʻp savol. Bir daqiqa kuting",
+      "quota": "Soʻrovlar limiti tugadi. Keyinroq urinib koʻring",
+      "busy": "Xizmat hozir band. Bir daqiqadan keyin takrorlang",
+      "upstream": "Javob olib boʻlmadi. Qayta urinib koʻring",
+      "bad_request": "Savol yuborilmadi. Qisqaroq yozib koʻring",
+      "network": "Serverga ulanib boʻlmadi. Internetni tekshiring"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "Meta": {
+    "title": "Digital courses — online courses for digital careers",
+    "description": "A catalog of online courses with the program, price and teacher of each one. An assistant answers your questions."
+  },
+  "LocaleSwitcher": {
+    "label": "Language"
+  },
+  "Nav": {
+    "brand": "Digital courses",
+    "label": "Site sections",
+    "courses": "Courses",
+    "teachers": "Teachers",
+    "pricing": "Prices",
+    "faq": "Questions",
+    "cta": "Choose a course",
+    "menu": "Menu",
+    "skip": "Skip to content",
+    "assistant": "Assistant"
+  },
+  "Hero": {
+    "title": "Online courses for digital careers",
+    "lead": "Pick a course from the catalog and see its program, price and teacher. The assistant answers questions about every course.",
+    "primary": "Choose a course",
+    "secondary": "Ask the assistant",
+    "windowTitle": "Assistant",
+    "question": "Where do I start if I have never worked with code?",
+    "answer": "Browse the catalog: every course shows its duration, level, price and teacher. For example:",
+    "placeholder": "Ask a question about the courses",
+    "send": "Send"
+  },
+  "Courses": {
+    "title": "Course catalog",
+    "intro": "Duration, level, price and teacher of every course",
+    "empty": "Courses will appear in the catalog soon"
+  },
+  "Steps": {
+    "title": "How to choose a course",
+    "choose": {
+      "title": "Pick a direction",
+      "text": "Open the catalog and compare courses by duration and level"
+    },
+    "study": {
+      "title": "Read the program",
+      "text": "Every course has a description, a price and a teacher"
+    },
+    "ask": {
+      "title": "Ask the assistant",
+      "text": "It answers from the school’s materials in Russian, Uzbek and English"
+    }
+  },
+  "Teachers": {
+    "title": "Teachers",
+    "intro": "Who leads the courses and what they work on",
+    "empty": "The list of teachers will appear soon"
+  },
+  "Pricing": {
+    "title": "Course prices",
+    "intro": "The price and duration of every course in the catalog",
+    "empty": "Prices will appear soon"
+  },
+  "Faq": {
+    "title": "Common questions",
+    "choose": {
+      "q": "How do I choose a course?",
+      "a": "Open the catalog and compare duration, level and price. If you are unsure, tell the assistant your goal and it will suggest a suitable course."
+    },
+    "source": {
+      "q": "Where does the assistant get its answers?",
+      "a": "From the school’s materials: course programs, prices and teacher descriptions. If the answer is not in the materials, the assistant says so."
+    },
+    "languages": {
+      "q": "Which languages does the site support?",
+      "a": "Russian, Uzbek and English. Switch the language in the site header."
+    },
+    "prices": {
+      "q": "Where can I see the prices?",
+      "a": "In the “Course prices” section, which lists the price of every course in the catalog"
+    }
+  },
+  "Footer": {
+    "title": "Every course in one catalog",
+    "lead": "The program, price and teacher of each course. You can ask the assistant your questions."
+  },
+  "Assistant": {
+    "noMaterials": "The school’s materials have no information yet. Please try again later",
+    "title": "Course assistant",
+    "intro": "Ask about courses, prices, schedule or mentors. The assistant answers from the school’s materials.",
+    "examples": {
+      "e1": "Which courses suit beginners?",
+      "e2": "When do the next groups start?",
+      "e3": "How do I pay and is there an installment plan?",
+      "e4": "Can I get a refund for a course?"
+    },
+    "chatLabel": "Conversation with the assistant",
+    "emptyHint": "Ask a question about courses, prices or schedule",
+    "inputLabel": "Your question",
+    "placeholder": "Type your question",
+    "send": "Send",
+    "clear": "Clear conversation",
+    "thinking": "Looking for the answer…",
+    "sources": "Sources",
+    "errors": {
+      "not_configured": "The assistant is not set up yet",
+      "rate_limited": "Too many questions in a row. Please wait a minute",
+      "quota": "The request limit is reached. Please try later",
+      "busy": "The service is busy right now. Please try again in a minute",
+      "upstream": "Could not get an answer. Please try again",
+      "bad_request": "The question could not be sent. Try making it shorter",
+      "network": "No connection to the server. Check your internet"
+    }
+  }
+}

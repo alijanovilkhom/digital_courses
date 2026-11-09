@@ -1,0 +1,313 @@
+@import "tailwindcss";
+
+/*
+ * Tokens dealt by the taste skill (start.mjs): palette blue-black-cornflower,
+ * type pairing Geist + Geist Mono, soft radius, solid buttons.
+ */
+:root {
+  color-scheme: dark;
+  --background: #0a0d14;
+  --surface: #131824;
+  --foreground: #e9edf3;
+  --muted: #a3acba; /* 7:1 or more on background and surface */
+  --accent: #5ab9fc;
+  --accent-ink: #0a0d14;
+  --border: rgb(233 237 243 / 0.08);
+  --raised: #1b2130; /* one step above surface: hover, chips */
+  --accent-hover: #7cc6fd;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --r-sm: 8px; /* controls, bubbles */
+  --r-lg: 16px; /* cards, windows */
+  --r-xl: 20px; /* large panels */
+
+  --nav: 72px;
+  --gut: 80px;
+  --padt: 120px;
+  --padb: 72px;
+  --display-weight: 500;
+  --display-tracking: -0.035em;
+  --t-h1: 72px;
+  --t-h2: 48px;
+  --t-lead: 20px;
+}
+
+@media (max-width: 639px) {
+  :root {
+    --nav: 56px;
+    --gut: 24px;
+    --padt: 96px;
+    --padb: 48px;
+    --t-h1: 40px;
+    --t-h2: 30px;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-raised: var(--raised);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-padding-top: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--display-weight);
+}
+h1,
+h2 {
+  letter-spacing: var(--display-tracking);
+}
+
+/* One content edge for header, sections and footer */
+.wrap {
+  width: min(100% - 2 * var(--gut), 1280px);
+  margin-inline: auto;
+}
+
+/* Buttons: one filled accent, one outlined */
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 24px;
+    border-radius: var(--r-sm);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+      transform 0.15s var(--ease),
+      background-color 0.15s var(--ease),
+      border-color 0.15s var(--ease);
+  }
+  .btn:active {
+    transform: scale(0.98);
+  }
+  .btn--primary {
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+  .btn--primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+  .btn--primary:active {
+    transform: scale(0.98);
+  }
+  .btn--secondary {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--foreground);
+  }
+  .btn--secondary:hover {
+    background: var(--raised);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.link {
+  position: relative;
+  color: var(--foreground);
+}
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s var(--ease);
+}
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Header: fixed, opaque, hairline from first paint */
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 10;
+  height: var(--nav);
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Sections: at least one screen; they grow when the content is longer,
+   because course and teacher counts come from the Excel catalog */
+.section,
+.closing {
+  min-height: calc(var(--h, 1) * 100svh);
+  padding: var(--padt) 0 var(--padb);
+}
+.closing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 0;
+  background: var(--surface);
+}
+.section h2,
+.closing h2 {
+  font-size: var(--t-h2);
+  line-height: 1.1;
+}
+.section__intro {
+  max-width: 52ch;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: var(--t-lead);
+  line-height: 1.5;
+}
+.section h2 + :not(.section__intro),
+.section__intro + * {
+  margin-top: 48px;
+}
+.ground-surface {
+  background: var(--surface);
+}
+.card {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+
+/* Hero: exactly one screen */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  padding-top: calc(var(--nav) + 48px);
+  overflow: hidden;
+  text-align: center;
+}
+.hero__h1 {
+  max-width: 880px;
+  margin-inline: auto;
+  font-size: var(--t-h1);
+  line-height: 1.04;
+}
+.hero__lead {
+  max-width: 52ch;
+  margin: 16px auto 0;
+  font-size: var(--t-lead);
+  line-height: 1.5;
+  color: var(--muted);
+}
+.hero__frame {
+  position: relative;
+  flex: 1;
+  min-height: 260px;
+  margin-top: 32px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-bottom: 0;
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  background: var(--surface);
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent);
+  mask-image: linear-gradient(to bottom, #000 82%, transparent);
+}
+
+/* The assistant window inside the hero frame */
+.window {
+  width: min(880px, 100% - 32px);
+  margin: 32px auto 0;
+  text-align: left;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+
+@media (max-width: 639px) {
+  .hero {
+    padding-top: calc(var(--nav) + 32px);
+  }
+  .hero__lead {
+    font-size: 18px;
+  }
+  .hero__frame {
+    margin-top: 24px;
+  }
+  .window {
+    margin-top: 16px;
+  }
+}
+
+/* Cards answer the pointer without moving (they are not links) */
+.card {
+  transition: border-color 0.2s var(--ease);
+}
+.card:hover {
+  border-color: rgb(233 237 243 / 0.28);
+}
+
+/* Motion plays only when the visitor has not asked for less; on a phone the
+   hero window rests, so nothing is hidden or delayed there */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sheet {
+    animation: fade 0.15s var(--ease) both;
+  }
+  @media (min-width: 640px) {
+    .msg {
+      animation: rise 0.5s var(--ease) both;
+      animation-delay: var(--d, 0s);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

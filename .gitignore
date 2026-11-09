@@ -1,0 +1,21 @@
+node_modules/
+.next/
+out/
+.env*.local
+.env
+data/
+.taste-skill/
+shots/
+.DS_Store
+*.log
+/coverage
+.vercel
+*.pem
+*.tsbuildinfo
+next-env.d.ts
+knowledge/~$*
+knowledge-sample/
+
+# Google OAuth client file downloaded from Cloud Console (contains the client secret)
+client_secret_*.json
+*.apps.googleusercontent.com.json
